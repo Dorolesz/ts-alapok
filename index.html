@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite TS bevezető</title>
+  </head>
+  <body>
+    <div>
+      <form>
+        <input type="text" id="studentName" placeholder="Tanuló neve: ">
+        <input type="number" id="gradeNumber" placeholder="Érdemjegy: ">
+        <button id="addGrade" type="submit">Hozzáad</button>
+      </form>
+    </div>
+
+    <div>
+      <label for="">Keresőmező: 
+      <input type="number"  id="searchGrade" min="1" max="5" placeholder="Keresés érdemjegye">
+      </label>
+    </div>
+    <ul id="gradeList"></ul>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

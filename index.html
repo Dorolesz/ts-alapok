@@ -2,21 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite TS bevezető</title>
   </head>
   <body>
     <div>
-      <form>
+      <form id="gradeForm">
         <input type="text" id="studentName" placeholder="Tanuló neve: ">
-        <input type="number" id="gradeNumber" placeholder="Érdemjegy: ">
-        <button id="addGrade" type="submit">Hozzáad</button>
+        <input type="number" id="gradeNumber" placeholder="Érdemjegy: " min="1" max="5">
+        <button id="addGrade" type="button">Hozzáad</button> <!-- Típus: button -->
       </form>
     </div>
 
     <div>
-      <label for="">Keresőmező: 
-      <input type="number"  id="searchGrade" min="1" max="5" placeholder="Keresés érdemjegye">
+      <label for="searchGrade">Keresőmező: 
+      <input type="number" id="searchGrade" min="1" max="5" placeholder="Keresés érdemjegye">
       </label>
     </div>
     <ul id="gradeList"></ul>

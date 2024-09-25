@@ -9,9 +9,9 @@ const students: Student[] = [];
 
 const gradeInput = document.getElementById('gradeNumber') as HTMLInputElement;
 const nameInput = document.getElementById('studentName') as HTMLInputElement;
-const gradeList = document.getElementById('gradeList') as HTMLInputElement;
+const gradeList = document.getElementById('gradeList') as HTMLUListElement;
 const searchGrade = document.getElementById('searchGrade') as HTMLInputElement;
-const addGradeButton = document.getElementById('addGrade') as HTMLInputElement;
+const addGradeButton = document.getElementById('addGrade') as HTMLButtonElement;
 
 function displayGrades(filteredStudents: Student[] = students) {
   gradeList.innerHTML = '';
@@ -20,13 +20,14 @@ function displayGrades(filteredStudents: Student[] = students) {
     li.textContent = `${student.name}: ${student.grade}`;
 
     if (student.grade === 1) {
-      li.classList.add('fall');
+      li.classList.add('fail');
     }
 
     gradeList.appendChild(li);
   });
 }
 
+// Gomb kattintási eseménykezelő
 addGradeButton.addEventListener('click', () => {
   const grade = Number(gradeInput.value);
   const name = nameInput.value.trim();
@@ -41,6 +42,7 @@ addGradeButton.addEventListener('click', () => {
   }
 });
 
+// Keresés gépelés közben
 searchGrade.addEventListener('input', () => {
   const searchValue = Number(searchGrade.value);
   if (searchValue >= 1 && searchValue <= 5) {
@@ -50,6 +52,3 @@ searchGrade.addEventListener('input', () => {
     displayGrades();
   }
 });
-
-console.log(gradeList);
-console.log(students);

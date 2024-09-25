@@ -1,0 +1,7 @@
+.fail {
+    border: 2px dashed red;
+    padding: 5px;
+    margin: 5px 0;
+    list-style-type: none;
+  }
+  
